@@ -7,6 +7,7 @@ import Button from "./styled/Button.styled";
 import SearchBar from "./Header/SearchBar";
 import SearchBarMob from "./Header/MobileSearchBar";
 import { useState } from "react";
+import Link from "next/link";
 
 const HeaderEl = styled.header`
   z-index: 10;
@@ -44,6 +45,7 @@ const Logo = styled.img`
   width: 45px;
   border-right: 1px solid ${Colors.Gray};
   padding-right: 1rem;
+  cursor: pointer;
 `;
 
 const Nav = styled.nav`
@@ -116,8 +118,10 @@ export default function Header({ mobileMenu }) {
         )}
       </MenuIcon>
       <Center>
-        <Logo src="/images/cryptoLogo.png" />
-        <LogoText href="#">NFT</LogoText>
+        <Link href={"/"}>
+          <Logo src="/images/cryptoLogo.png" />
+        </Link>
+        <LogoText href="/asset">NFT</LogoText>
         <SearchBar />
         <Nav>
           <ul>

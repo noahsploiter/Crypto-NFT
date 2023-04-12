@@ -11,6 +11,7 @@ import Head from "next/head";
 import EditionSelector from "./Asset/EditionSelector";
 import OwnershipItem from "./Asset/OwnershipItem";
 import BidSticky from "./Asset/BidSticky";
+import Link from "next/link";
 
 const AssetEl = styled.article`
   background-color: ${Colors.White};
@@ -171,7 +172,7 @@ export default function Asset() {
         <RightSection>
           <BackBtn>
             <AiFillCaretLeft />
-            Back
+            <Link href="/">Back</Link>
           </BackBtn>
           <TopBtns>
             <LikesBtn>
